@@ -53,9 +53,10 @@ import { Link } from "react-router-dom";
                             emoji.
                             </div>
                           </div>
+                  
 
                             <div className="card-footer">
-                              <button type="button" className="btn btn-primary">Connexion</button>
+                            <Link to={`/Admin/ChallengeList`} className="btn btn-primary" aria-current="page">Connexion</Link>
                             </div>
                                       
 
