@@ -1,5 +1,6 @@
 import React from "react";
 import { TServerUi } from "./Server.types";
+import { Link } from "react-router-dom";
 
 const Server: TServerUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const Server: TServerUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -70,15 +69,15 @@ const Server: TServerUi = ({}) => {
                           className="card-footer"
                           style={{ display: "flex", justifyContent: "space-between" }}
                         >
-                          <button type="button" className="btn btn-secondary mr-auto">
-                            &lt; Retour
-                          </button>
+                          <Link to={`/Student/ChallengeList`} className="btn btn-secondary mr-auto">Retour</Link>
+
+                        
                           <button type="button" className="btn btn-primary mx-auto">
                             Tester la connexion
                           </button>
-                          <button type="submit" className="btn btn-primary ml-auto">
-                            Suite &gt;
-                          </button>
+
+                          <Link to={`/Student/InstanceDetails`} className="btn btn-primary ml-auto">Suite</Link>
+
                         </div>
                       </div>
                     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { TStartUi } from "./Start.types";
+import { Link } from "react-router-dom";
 
 const Start: TStartUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const Start: TStartUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -28,7 +27,8 @@ const Start: TStartUi = ({}) => {
                       <div className="card-header">
                         <div className="row align-items-center">
                           <div className="col-auto">
-                            <button className="btn btn-link border">&lt;</button>
+                          <Link to={`/Student/InstanceDetails`} className="btn btn-link border">&lt;</Link>
+                          
                           </div>
                           <div className="col text-center">
                             <span>Kevin, êtes-vous prêt ?</span>
@@ -42,9 +42,9 @@ const Start: TStartUi = ({}) => {
                       </div>
                       <div className="card-body ">
                         <div className="mb-3 col d-flex justify-content-center">
-                          <button type="submit" className="btn btn-primary btn-block w-100">
-                            Lancer le challenge
-                          </button>
+
+                        <Link to={`/Student/Level`} className="btn btn-primary btn-block w-100">Lancer le challenge</Link>
+
                         </div>
                       </div>
                     </div>

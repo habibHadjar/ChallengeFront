@@ -1,5 +1,6 @@
           import React from "react";
           import { TAdminUi } from "./Admin.types";
+import { Link } from "react-router-dom";
 
           const Student: TAdminUi = ({}) => {
             return (
@@ -11,9 +12,9 @@
                     </a>
                     <ul className="navbar-nav ms-auto">
                       <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">
-                          Admin
-                        </a>
+                        
+                      <Link to={`/`} className="nav-link active" aria-current="page">Student</Link>
+                  
                       </li>
                     </ul>
                   </div>

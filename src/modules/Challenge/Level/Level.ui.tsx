@@ -1,5 +1,6 @@
 import React from "react";
 import { TLevelUi } from "./Level.types";
+import { Link } from "react-router-dom";
 
 const Level: TLevelUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const Level: TLevelUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -28,7 +27,9 @@ const Level: TLevelUi = ({}) => {
                     <div className="card-header">
                       <div className="row align-items-center">
                         <div className="col-auto">
-                          <button className="btn btn-link border">&lt;</button>
+
+                        <Link to={`/Student/Start`} className="btn btn-link border">&lt;</Link>
+  
                         </div>
                         <div className="col text-center">
                           <span>Kevin, êtes-vous prêt ?</span>

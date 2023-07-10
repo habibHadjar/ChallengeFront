@@ -1,5 +1,6 @@
 import React from "react";
 import { TInstanceUi } from "./Instance.types";
+import { Link } from "react-router-dom";
 
 const Instance: TInstanceUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const Instance: TInstanceUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -84,15 +83,14 @@ const Instance: TInstanceUi = ({}) => {
             className="card-footer"
             style={{ display: "flex", justifyContent: "space-between" }}
           >
-            <button type="button" className="btn btn-secondary mr-auto">
-              &lt; Retour
-            </button>
+             <Link to={`/Student/ServerDetails`} className="btn btn-secondary">Retour</Link>
+          
             <button type="button" className="btn btn-primary mx-auto">
               Tester la connexion
             </button>
-            <button type="submit" className="btn btn-primary ml-auto">
-              Suite &gt;
-            </button>
+
+            <Link to={`/Student/Start`} className="btn btn-primary ml-auto">Suite</Link>
+
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
           import React from "react";
           import { TStudentUi } from "./Student.types";
+import { Link } from "react-router-dom";
 
           const Student: TStudentUi = ({}) => {
             return (
@@ -11,9 +12,7 @@
       </a>
       <ul className="navbar-nav ms-auto">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            Admin
-          </a>
+        <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
         </li>
       </ul>
     </div>
@@ -86,7 +85,8 @@
                           </div>
 
                           <div className="card-footer">
-                          <button type="button" className="btn btn-primary">Connexion</button>
+                          <Link to={`Student/ContactDetails`} className="btn btn-primary">Connexion</Link>
+               
                           </div>
                           
 

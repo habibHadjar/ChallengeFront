@@ -1,5 +1,6 @@
 import React from "react";
 import { TAdminChallengeListUi } from "./AdminChallengeList.types";
+import { Link } from "react-router-dom";
 
 const AdminChallengeList: TAdminChallengeListUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const AdminChallengeList: TAdminChallengeListUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/`} className="nav-link active" aria-current="page">Student</Link>
             </li>
           </ul>
         </div>

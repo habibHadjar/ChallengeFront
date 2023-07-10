@@ -1,5 +1,6 @@
 import React from "react";
 import { TStudentChallengeListUi } from "./StudentChallengeList.types";
+import { Link } from "react-router-dom";
 
 const StudentChallengeList: TStudentChallengeListUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const StudentChallengeList: TStudentChallengeListUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -35,21 +34,21 @@ const StudentChallengeList: TStudentChallengeListUi = ({}) => {
                       <h5>Nom du Challenge 1</h5>
                       <p>Score: 2/20</p>
                     </div>
-                    <button className="btn btn-successr">Continuer</button>
+                    <Link to={`/Student/ServerDetails`} className="btn btn-sucess">Continuer</Link>
                   </li>
                   <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div>
                       <h5>Nom du Challenge 2</h5>
                       <p>Score: 8/20</p>
                     </div>
-                    <button className="btn btn-success">Continuer</button>
+                    <Link to={`/Student/ServerDetails`} className="btn btn-sucess">Continuer</Link>
                   </li>
                   <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div>
                       <h5>Nom du Challenge 3</h5>
                       <p>Score: 10/20</p>
                     </div>
-                    <button className="btn btn-success">Continuer</button>
+                    <Link to={`/Student/ServerDetails`} className="btn btn-sucess">Continuer</Link>
                   </li>
                 </ul>
               </div>

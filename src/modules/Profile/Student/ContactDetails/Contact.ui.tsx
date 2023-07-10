@@ -1,5 +1,6 @@
 import React from "react";
 import { TContactUi } from "./Contact.types";
+import { Link } from "react-router-dom";
 
 const Contact: TContactUi = ({}) => {
   return (
@@ -11,9 +12,7 @@ const Contact: TContactUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Admin
-              </a>
+            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +52,7 @@ const Contact: TContactUi = ({}) => {
                           </div>
 
                           <div className="card-footer">
-                          <button type="button" className="btn btn-primary">Suite</button>
+                          <Link to={`/Student/ChallengeList`} className="btn btn-primary">Suite</Link>
                           </div>
                           
 
