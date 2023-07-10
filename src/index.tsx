@@ -1,18 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from 'modules/App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Student from 'modules/Authentication/Student/Student';
-import 'sass';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import App from "modules/App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Student from "modules/Authentication/Student/Student";
+import "sass";
+import Admin from "modules/Authentication/Admin";
+import AdminChallengeList from "modules/Profile/Admin/AdminChallengeList.ui";
+import StudentChallengeList from "modules/Profile/Student/ChallengeList/StudentChallengeList.ui";
+import Contact from "modules/Profile/Student/ContactDetails/Contact.ui";
+import Instance from "modules/Challenge/InstanceDetails/Instance.ui";
+import Level from "modules/Challenge/Level/Level.ui";
+import Server from "modules/Challenge/ServerDetails/Server.ui";
+import Start from "modules/Challenge/Start/Start.ui";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([{ path: "*", Component: App }]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Student />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

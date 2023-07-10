@@ -1,1 +1,1 @@
-export { default } from './AdminChallenge';
+export { default } from './AdminChallengeList';

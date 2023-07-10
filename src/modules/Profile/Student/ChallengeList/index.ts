@@ -1,1 +1,1 @@
-export { default } from './StudentChallenge';
+export { default } from './StudentChallengeList';

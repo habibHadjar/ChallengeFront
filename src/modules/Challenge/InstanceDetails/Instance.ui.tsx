@@ -25,7 +25,7 @@ const Instance: TInstanceUi = ({}) => {
         style={{ maxHeight: "calc(100% - 5rem)" }}
       >
         <div className="card w-75 w-lg-100 m-3 ">
-          <div className="card-header">Configuration du serveur</div>
+          <div className="card-header">Configuration de l'instance</div>
           <div className="card-body">
             <div className="mb-3">
               <form>

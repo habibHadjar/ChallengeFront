@@ -64,7 +64,7 @@
                       </div> */}
 
 
-                {/* Student card login <div
+                {/* Student card login*/} <div
                         className="container bg-danger h-100 overflow-y-auto p-0 d-flex justify-content-center align-items-start"
                         style={{ maxHeight: "calc(100% - 5rem)" }}
                       >
@@ -91,7 +91,7 @@
                           
 
                         </div>
-                      </div> */}
+                      </div> 
 
                 {/* Student coordonnées <div
                         className="container bg-danger h-100 overflow-y-auto p-0 d-flex justify-content-center align-items-start"

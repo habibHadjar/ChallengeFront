@@ -25,7 +25,7 @@ const Contact: TContactUi = ({}) => {
                         style={{ maxHeight: "calc(100% - 5rem)" }}
                       >
                         <div className="card w-75 w-lg-100 m-3 ">
-                          <div className="card-header">Login</div>
+                          <div className="card-header">Coordonnées</div>
                           <div className="card-body">
                             <div className="mb-3">
                               <label htmlFor="InputName" className="form-label">

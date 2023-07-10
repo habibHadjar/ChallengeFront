@@ -1,7 +1,7 @@
 import React from "react";
-import { TAdminChallengeUi } from "./AdminChallenge.types";
+import { TAdminChallengeListUi } from "./AdminChallengeList.types";
 
-const AdminChallenge: TAdminChallengeUi = ({}) => {
+const AdminChallengeList: TAdminChallengeListUi = ({}) => {
   return (
     <>
       <nav className="navbar bg-body-tertiary" style={{ height: "5rem" }}>
@@ -79,4 +79,4 @@ const AdminChallenge: TAdminChallengeUi = ({}) => {
   );
 };
 
-export default AdminChallenge;
+export default AdminChallengeList;
