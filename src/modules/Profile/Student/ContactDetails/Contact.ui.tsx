@@ -12,7 +12,7 @@ const Contact: TContactUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-            <Link to={`/Admin`} className="nav-link active" aria-current="page">Admin</Link>
+            <Link to={`/`} className="nav-link active" aria-current="page">Déconnexion</Link>
             </li>
           </ul>
         </div>
