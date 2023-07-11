@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Student from "modules/Authentication/Student/Student";
 import "sass";
 import Admin from "modules/Authentication/Admin";
-import AdminChallengeList from "modules/Profile/Admin/AdminChallengeList.ui";
 import StudentChallengeList from "modules/Profile/Student/ChallengeList/StudentChallengeList.ui";
 import Contact from "modules/Profile/Student/ContactDetails/Contact.ui";
 import Instance from "modules/Challenge/InstanceDetails/Instance.ui";

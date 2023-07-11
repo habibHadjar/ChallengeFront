@@ -1,22 +1,28 @@
 import React from "react";
-import { TAdminChallengeListUi } from "./AdminChallengeList.types";
+import { TAdminStudentListUi } from "./AdminStudentList.types";
 import { Link } from "react-router-dom";
 
-const AdminChallengeList: TAdminChallengeListUi = ({}) => {
+const AdminStudentList: TAdminStudentListUi = ({}) => {
   return (
     <>
-      <nav className="navbar bg-body-tertiary" style={{ height: "5rem" }}>
+
+<nav className="navbar bg-body-tertiary" style={{ height: "5rem" }}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Challenge
           </a>
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav d-flex flex-row ml-auto ">
+            <li className="nav-item mx-3">
+              <Link to={`/Admin/ChallengeList`} className="nav-link active" aria-current="page">Liste de challenges</Link>
+            </li>
+            
             <li className="nav-item">
-            <Link to={`/Admin`} className="nav-link active" aria-current="page">Déconnexion</Link>
+              <Link to={`/Admin`} className="nav-link active" aria-current="page">Déconnexion</Link>
             </li>
           </ul>
         </div>
       </nav>
+    
 
       {/* Admin challenge list*/}
       <div
@@ -24,7 +30,7 @@ const AdminChallengeList: TAdminChallengeListUi = ({}) => {
         style={{ maxHeight: "calc(100% - 5rem)" }}
       >
         <div className="card w-75 w-lg-100 m-3 ">
-          <div className="card-header">Liste des challenges</div>
+          <div className="card-header">Liste d'étudiants</div>
           <div className="card-body">
             <div className="mb-3">
               <div className="accordion" id="studentAccordion">
@@ -54,14 +60,12 @@ const AdminChallengeList: TAdminChallengeListUi = ({}) => {
                             <h6>Nom du Challenge 1</h6>
                             <p>Score: 2/20</p>
                           </div>
-                          <button className="btn btn-danger">Arrêt</button>
                         </li>
                         <li className="list-group-item d-flex justify-content-between align-items-center">
                           <div>
                             <h6>Nom du Challenge 2</h6>
                             <p>Score: 8/20</p>
                           </div>
-                          <button className="btn btn-danger">Arrêt</button>
                         </li>
                       </ul>
                     </div>
@@ -78,4 +82,4 @@ const AdminChallengeList: TAdminChallengeListUi = ({}) => {
   );
 };
 
-export default AdminChallengeList;
+export default AdminStudentList;

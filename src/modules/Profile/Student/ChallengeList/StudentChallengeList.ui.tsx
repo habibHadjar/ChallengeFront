@@ -12,7 +12,7 @@ const StudentChallengeList: TStudentChallengeListUi = ({}) => {
           </a>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-            <Link to={`/`} className="nav-link active" aria-current="page">Déconnexion</Link>
+              <Link to={`/`} className="nav-link active" aria-current="page">Déconnexion</Link>
             </li>
           </ul>
         </div>

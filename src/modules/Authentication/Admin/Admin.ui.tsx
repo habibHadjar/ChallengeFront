@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
                       Challenge
                     </a>
                     <ul className="navbar-nav ms-auto">
-                      <li className="nav-item">
-                        
+                    
+                        <li>
                       <Link to={`/`} className="nav-link active" aria-current="page">Student</Link>
                   
                       </li>
