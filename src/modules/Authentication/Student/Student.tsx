@@ -7,7 +7,7 @@ const Student: TStudent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await api.post('./student/signing'); 
+        const response = await api.post('./student/signin'); 
         console.log(response.data);
         return response.data;
       } catch (error) {
