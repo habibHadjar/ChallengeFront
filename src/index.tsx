@@ -13,6 +13,7 @@ import Instance from "modules/Challenge/InstanceDetails/Instance.ui";
 import Level from "modules/Challenge/Level/Level.ui";
 import Server from "modules/Challenge/ServerDetails/Server.ui";
 import Start from "modules/Challenge/Start/Start.ui";
+import { CookiesProvider } from "react-cookie";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([{ path: "*", Component: App }]);
@@ -21,9 +22,9 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <CookiesProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </CookiesProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

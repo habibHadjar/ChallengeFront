@@ -8,31 +8,50 @@ import AdminChallengeList from "modules/Profile/Admin/ChallengeList/AdminChallen
 import AdminStudentList from "modules/Profile/Admin/StudentList/AdminStudentList.ui";
 import StudentChallengeList from "modules/Profile/Student/ChallengeList/StudentChallengeList.ui";
 import Contact from "modules/Profile/Student/ContactDetails/Contact.ui";
+import { useCookies } from 'react-cookie';
+import axios from 'axios';
+
 import React from "react";
 import {
   BrowserRouter,
   createBrowserRouter,
+  Navigate,
   Route,
   RouterProvider,
   Routes,
 } from "react-router-dom";
 
 export default function App() {
+  const [cookies] = useCookies(['access_token']);
+
+  const isAuthenticated = !!cookies.access_token;
+
   return (
     <Routes>
-      <Route path="/" element={<Student />} />
-      <Route path="/Student/ChallengeList" element={<StudentChallengeList />} />
-      <Route path="/Student/ContactDetails" element={<Contact />} />
-      <Route path="/Student/InstanceDetails" element={<Instance />} />
-      <Route path="/Student/ServerDetails" element={<Server />} />
-      <Route path="/Student/Level" element={<Level />} />
-      <Route path="/Student/Start" element={<Start />} />
+      {!isAuthenticated ? (
+        <>
+          <Route path="/" element={<Student />} />
+          <Route path="/Admin/*" element={<Navigate to="/Admin/" replace />} />
+        </>
+      ) : (
+        <>
+          <Route path="/Student/ChallengeList" element={<StudentChallengeList />} />
+          <Route path="/Student/ContactDetails" element={<Contact />} />
+          <Route path="/Student/InstanceDetails" element={<Instance />} />
+          <Route path="/Student/ServerDetails" element={<Server />} />
+          <Route path="/Student/Level" element={<Level />} />
+          <Route path="/Student/Start" element={<Start />} />
+          <Route path="/Admin/ChallengeList/*" element={<AdminChallengeList />} />
+          <Route path="/Admin/StudentList/*" element={<AdminStudentList />} />
+        </>
+      )}
       <Route path="/Admin/" element={<Admin />} />
-      <Route path="/Admin/ChallengeList/*" element={<AdminChallengeList />} />
-      <Route path="/Admin/StudentList/*" element={<AdminStudentList />} />
+      <Route path="/*" element={<Navigate to="/" replace />} />
     </Routes>
   );
+  
 }
+
 
 /* const App = () => {
     return (

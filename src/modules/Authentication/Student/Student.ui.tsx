@@ -1,11 +1,11 @@
-          import React from "react";
-          import { TStudentUi } from "./Student.types";
+import React from "react";
+import { TStudentUi } from "./Student.types";
 import { Link } from "react-router-dom";
 
-          const Student: TStudentUi = ({}) => {
-            return (
-              <>
-                <nav className="navbar bg-body-tertiary" style={{ height: "5rem" }}>
+const Student: TStudentUi = ({}) => {
+  return (
+  <>
+  <nav className="navbar bg-body-tertiary" style={{ height: "5rem" }}>
     <div className="container-fluid">
       <a className="navbar-brand" href="#">
         Challenge

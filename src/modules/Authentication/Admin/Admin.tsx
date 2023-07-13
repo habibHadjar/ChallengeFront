@@ -3,6 +3,7 @@ import AdminUi from "./Admin.ui";
 import { TAdmin } from "./Admin.types";
 
 const Admin: TAdmin = () => {
+
   return <AdminUi />;
 };
 
